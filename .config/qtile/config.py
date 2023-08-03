@@ -6,8 +6,6 @@ import fontawesome as fa
 import subprocess
 import os
 
-
-
 mod = "mod4"
 alt = "mod1"
 
@@ -16,11 +14,11 @@ browser = "firefox"
 media = "vlc"
 music = "spotify"
 
-
 regfont = 'JetBrainsMono Nerd Font Mono'
 boldfont = 'JetBrainsMono Nerd Font Bold'
 italicfont = 'JetBrainsMono Nerd Font Italic'
 
+# catppuccin colorscheme
 cs = Flavour.macchiato()
 
 @hook.subscribe.startup_once
@@ -54,7 +52,7 @@ keys = [
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
     # LAYOUT SETTING
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key(["Lock"], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"], "space", lazy.layout.flip()),
     
     # GENERAL SETTINGS
@@ -79,22 +77,22 @@ keys = [
 ]
 
 groups = [
-            Group("1", screen_affinity=1),
-            Group("2"),
-            Group("3"),
-            Group("4"),
-            Group("5"),
-            Group("6"),
-            Group("7"),
-            Group("8", layout="verticaltile", screen_affinity=2),
-            Group("9", matches=[Match(wm_class=["Kodi"])], layout="max", screen_affinity=3),
-        ]
+    Group("1", screen_affinity=1),
+    Group("2"),
+    Group("3"),
+    Group("4"),
+    Group("5"),
+    Group("6"),
+    Group("7"),
+    Group("8", layout="verticaltile", screen_affinity=2),
+    Group("9", matches=[Match(wm_class=["Kodi"])], layout="max", screen_affinity=3),
+]
 
 for i in groups:
     keys.extend([
         Key([mod], i.name, lazy.group[i.name].toscreen(),desc="Switch to group {}".format(i.name)),
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name), desc="Move focused window to group {}".format(i.name)),
-    ])
+])
 
 layout_defaults = dict(
     margin=8,
@@ -109,7 +107,7 @@ layouts = [
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
-    layout.Bsp(),
+    # layout.Bsp(),
     # layout.Matrix(),
     # layout.MonadWide(),
     # layout.RatioTile(),
@@ -145,12 +143,12 @@ screens = [
     Screen(
         top=bar.Bar(
             [   widget.Sep(
-                    padding=3, 
+                    padding=10, 
                     linewidth=0, 
                     background=cs.base.hex
                 ),
                 widget.Image(
-                    filename='~/Pictures/itsv_logo.svg',
+                    filename='~/.local/share/assets/icons/itsv_logo.svg',
                     margin = 1,
                     mouse_callbacks= {
                         'Button1':

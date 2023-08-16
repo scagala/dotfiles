@@ -1,11 +1,11 @@
 #!/bin/sh
 
-MONITORS_N=$(xrandr --listmonitors | grep "Monitors: " | awk '{print $2}')
-if [[ MONITORS_N -eq 3 ]]; then
-    	.screenlayout/tripleMon.sh
-else
-		.screenlayout/singleMon.sh  
-fi
+# MONITORS_N=$(xrandr --listmonitors | grep "Monitors: " | awk '{print $2}')
+# if [[ MONITORS_N -eq 3 ]]; then
+    	# .screenlayout/tripleMon.sh
+# else
+		# .screenlayout/singleMon.sh
+# fi
 
 feh --bg-fill /home/en1qc/Pictures/leap_of_faith.png --bg-fill /home/en1qc/Pictures/leap_of_faith.png --bg-fill /home/en1qc/Pictures/leap_of_faith.png2
 #picom & disown # --experimental-backends --vsync should prevent screen tearing on most setups if needed

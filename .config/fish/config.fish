@@ -3,7 +3,8 @@ if status is-interactive
 end
 
 set -g fish_greeting
-
+set -gx EDITOR micro
+#setenv EDITOR micro
 #####################################
 #               ALIASES             #
 #####################################
@@ -23,3 +24,6 @@ alias gpp="git pull"
 alias gpu="optimus-manager --print-mode"
 alias amd="optimus-manager --switch integrated"
 alias nvidia="optimus-manager --switch nvidia"
+# coding
+alias code="codium"
+alias vim="nvim"

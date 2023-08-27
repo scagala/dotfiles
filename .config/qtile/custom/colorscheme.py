@@ -1,25 +1,32 @@
-colors = {
-    # darkest to lightest
-    "crust": "#121926",
-    "mantle": "#1e2030",
-    "base": "#24273a",
-    "surface" : "#363a4f",
-    "overlay" : "#6e738d",
-    "subtext" : "#a5adcb",
-    "text" : "#cad3f5",
-    # colors
-    "lavender" : "#b7bdf8",
-    "blue" : "#8aadf4",
-    "sapphire" : "#7dc4e4",
-    "sky" : "#91d7e3",
-    "teal" : "#8bd5ca",
-    "green" : "#a6da95",
-    "yellow" : "#eed49f",
-    "peach" : "#ef9f76",
-    "maroon" : "#ee99a0",
-    "red" : "#ed8796",
-    "mauve" : "#c6a0f6",
-    "pink" : "#f5bde6",
-    "flamingo" : "#f0c6c6",
-    "rosewater" : "#f4dbd6"
-}
+from dataclasses import dataclass
+
+@dataclass(frozen=True)
+class Catppuccin:
+    rosewater = "#f5e0dc"
+    flamingo  = "#f2cdcd"
+    pink      = "#f5c2e7"
+    mauve     = "#cba6f7"
+    red       = "#f38ba8"
+    maroon    = "#eba0ac"
+    peach     = "#fab387"
+    yellow    = "#f9e2af"
+    green     = "#a6e3a1"
+    teal      = "#94e2d5"
+    sky       = "#89dceb"
+    sapphire  = "#74c7ec"
+    blue      = "#89b4fa"
+    lavender  = "#b4befe"
+    text      = "#cdd6f4"
+    subtext1  = "#bac2de"
+    subtext0  = "#a6adc8"
+    overlay2  = "#9399b2"
+    overlay1  = "#7f849c"
+    overlay0  = "#6c7086"
+    surface2  = "#585b70"
+    surface1  = "#45475a"
+    surface0  = "#313244"
+    base      = "#1e1e2e"
+    mantle    = "#181825"
+    crust     = "#11111b"
+
+palette = Catppuccin()

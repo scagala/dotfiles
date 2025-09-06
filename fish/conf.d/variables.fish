@@ -1,4 +1,4 @@
-set -Ux MICRO_TRUECOLOR 1
+setenv EDITOR nvim
 
 set -Ux XDG_CONFIG_HOME $HOME/.config
 set -Ux XDG_STATE_HOME $HOME/.local/state
@@ -18,3 +18,4 @@ set -Ux ZDOTDIR $XDG_CONFIG_HOME/zsh
 set -Ux CARGO_HOME $XDG_DATA_HOME/cargo
 set -Ux CUDA_CACHE_PATH $XDG_CACHE_HOME/nv
 set -Ux DOTNET_CLI_HOME $XDG_DATA_HOME/dotnet
+set -Ux MICRO_TRUECOLOR 1

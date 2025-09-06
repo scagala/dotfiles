@@ -1,5 +1,7 @@
 set -U fish_greeting
 
+setenv EDITOR nvim
+
 fish_ssh_agent
 # starship init fish | source
 zoxide init fish | source

@@ -1,0 +1,6 @@
+[user]
+	name = Simon Cagala
+	email = simon.cagala@protonmail.com
+
+[url "git@github.com:scagala/"]
+	insteadOf = https://github.com/scagala/
